@@ -1,0 +1,50 @@
+@media only screen and (max-width: 700px) {
+  body {
+      font-size:14px;
+  }
+}
+.naslov{
+    text-align:center;
+  font-size:3.5em;
+  font-family: 'Dosis', sans-serif;
+  color:#0D1F2D;
+  height:60px;
+  overflow: visible;
+  display:inline;
+}
+.margina-top{
+  margin-top:30%;
+}
+.futer{
+    position:absolute;
+    bottom:0;
+    height:60px;
+   text-align:center;
+    width:100%;
+     background: #16222a;;
+    color:white;
+     font-size:17px;
+    padding:20px;
+  }
+  .unutrasnji{
+      background-color:white;
+      border-radius:3px;
+  }
+  html{
+    height:100vh;
+  
+  }
+  body{
+    background: linear-gradient(to right, #5e6be7 , #795ee8);
+
+  }
+  .novi-citat{
+      font-size:1.5em;
+      background-color:#4776e6;
+      color:white;
+      font-family: Raleway,sans-serif;
+  }
+  #citat, #autor1{
+    color:#16222a;
+    font-size:1.3em;
+  }
