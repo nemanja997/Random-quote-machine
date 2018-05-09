@@ -1,8 +1,8 @@
 # Random-quote-machine
-Web aplikacija za dobijanje nasumičnih citata poznatih ličnosti.<br>
-Pošto API vraća citate na engleskom jeziku cela aplikacija je uradjena na engleskom jeziku.<br><br>
+Web application for getting random quotes with AJAX<br>
+
 Credits to [API provider](http://random-quote-generator.herokuapp.com/).
-## Tehnologije
+## Technologies:
 -HTML<br>
 -CSS<br>
 -jQuery<br>
