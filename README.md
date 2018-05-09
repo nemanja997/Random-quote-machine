@@ -1,5 +1,5 @@
 # Random-quote-machine
-Web application for getting random quotes with AJAX<br>
+A web application for getting random quotes with AJAX<br>
 
 Credits to [API provider](http://random-quote-generator.herokuapp.com/).
 ## Technologies:
