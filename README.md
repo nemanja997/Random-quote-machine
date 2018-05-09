@@ -8,4 +8,4 @@ Credits to [API provider](http://random-quote-generator.herokuapp.com/).
 -jQuery<br>
 -Bootstrap 4<br>
 <br>
-**Ovde možete pogledati** [Live preview](https://codepen.io/nemanja97/full/KXmoxe/)
+-For running website see [Live preview](https://codepen.io/nemanja97/full/KXmoxe/)<br>
