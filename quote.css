@@ -1,50 +1,350 @@
-@media only screen and (max-width: 700px) {
-  body {
-      font-size:14px;
-  }
+/*Varijable*/
+:root {
+  --main1: #203A43;
+  --main2: #ffffff;
 }
-.naslov{
-    text-align:center;
-  font-size:3.5em;
-  font-family: 'Dosis', sans-serif;
-  color:#0D1F2D;
-  height:60px;
-  overflow: visible;
-  display:inline;
-}
-.margina-top{
-  margin-top:30%;
-}
-.futer{
-    position:absolute;
-    bottom:0;
-    height:60px;
-   text-align:center;
-    width:100%;
-     background: #16222a;;
-    color:white;
-     font-size:17px;
-    padding:20px;
-  }
-  .unutrasnji{
-      background-color:white;
-      border-radius:3px;
-  }
-  html{
-    height:100vh;
-  
-  }
-  body{
-    background: linear-gradient(to right, #5e6be7 , #795ee8);
 
+
+/*Global*/
+  html, body {
+    font-size: 16px;      
+    margin:0;
+    padding:0; 
+    width:100%; 
+    height:100%; 
+    overflow: hidden;
+}
+body{
+  min-height:100%;
+}
+*{
+  box-sizing:border-box;
+}
+/*-Global*/
+
+.wrap{
+  background-color: #0f0f0f;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='848' height='848' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23141414' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23141414'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    height:100%;
+  width:100%;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 70px;
+  position:relative;  
+}
+
+.flexWrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.skewDiv{
+    position:absolute;
+    top:0px;
+    right:0px;
+    height:100%;
+    width:35%;
+    background:var(--main2);
+    background-color: #ececec;
+    background:linear-gradient(to right,#f1f1f1,rgb(255, 255, 255));
+    transform: skewX(-10deg); 
+    transform-origin: bottom right;
+    animation: skewDivSlide 0.7s  ease-out;
+}
+
+.text{
+    width:60%;
+    padding:10vh;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size:40px;
+    letter-spacing: -3px;
+    color: var(--main2);
+    position:relative;
+    max-height:80%;
+    overflow: hidden;
+    animation:fadeIn 0.7s 0.5s ease-out;
+   opacity:0;
+   animation-fill-mode: forwards;
+}
+
+.header{
+    display:flex;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:3vh 5vh;
+    justify-content:space-between;
+    z-index:1;
+    animation:fadeIn 0.3s linear;
+}
+
+.logo{
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+}
+.logoText{
+    display:inline-block;
+    width:auto;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 10px;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color:#b6b6b6;
+    text-decoration:none;
+    transition:0.5s;
+}
+
+.logo:hover > .logoText{
+  color:white;
+}
+.quoteMark{
+  width:30px;
+}
+#gitHubIkonica{
+fill:#0f0f0f;
+}
+
+.author{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size:40px;
+    letter-spacing: -3px;
+    color: #0f0f0f;
+    position:absolute;
+    bottom:10vh;
+   right:10vw;
+   z-index:1;
+   animation:fadeIn 1s 0.5s ease-out;
+   opacity:0;
+   animation-fill-mode: forwards;
+}
+.credits{
+  position:absolute;
+    bottom:10px;
+   right:30px;
+   z-index:1;
+   font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    color:#666666;
+}
+.creditsLink{
+  color: #666666;
+}
+.creditsLink:hover{
+  color: #919191;
+}
+.mainButtonsDiv{
+    height:30vh;
+    width:25vw;
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    animation:fadeIn 0.4s 0.4s linear;
+   opacity:0;
+   animation-fill-mode: forwards;
+}
+.dugme:focus{
+    outline:0; /*Skidanje plavog outline-a*/
+}
+
+#dugmeQuote{
+    background:rgb(184, 20, 134);
+    background-image: linear-gradient(to right, #fa709a, #fee140);
+    font-size: 40px;
+    text-decoration: none;
+    border:none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight:400;
+    height:65%;
+    width:100%;
+    transition: 0.3s;
+    cursor:pointer;
+    outline:0;
+    color: #fafafa;
+    border-radius:5px;
+    box-shadow:#a35643c4 0px 10px 40px ;
+    position:relative;
+    z-index:1;
+}
+#dugmeQuote:hover{
+    background-image: linear-gradient(to right, #fa709a, #fee140);
+    box-shadow:#d17761 0px 30px 80px -25px;
+    position:relative;
+    z-index:3;
+    -webkit-transform: scale(1.1);
+}
+#dugmeTweet{
+    background:linear-gradient(100deg,#209cff,#68e0cf);
+    font-size: 20px;
+    text-decoration: none;
+    border:none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    margin-top:10%;
+    height:25%;
+    width:60%;
+    transition: 0.3s;
+    box-shadow:#498d9e 0px 5px 40px ;
+    cursor:pointer;
+    outline:0;
+    color: #fafafa;
+    border-radius:5px;
+    position:relative;
+    z-index:2;
+}
+  #dugmeTweet:hover{
+    box-shadow:#498d9e 0px 20px 70px -12px;
+    background:linear-gradient(100deg,#209cff,#68e0cf);
+    position:relative;
+    z-index:3;
+    -webkit-transform: scale(1.1);
+}
+  .twitterIcon{
+    height:30px;
+    vertical-align: middle;
+}
+
+.github:hover #gitHubIkonica{
+    fill:#575757;
+}
+#gitHubIkonica{
+      transition:0.8s;
+}
+
+.animacijaNaKlik{
+      animation:fadeIn 1s 0.4s ease-out;
+       animation-fill-mode: forwards;
+}
+    
+
+@media only screen and (max-width: 1200px) {
+    .text{
+      padding:3vh;
+      font-size:30px;
+}
+.header{
+      display:flex;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      padding:2vh 3vh;
+      justify-content:space-between;
+      z-index:1;
+}
+.skewDiv{
+      width:40%;
+}
+#dugmeQuote{
+      font-size:30px;
+}
+.author{
+      font-size:35px;
+}
+}
+
+  @media only screen and (max-width: 700px) {
+    body {
+        font-size:14px;
+    }
+    .text{
+      font-size:25px;
+      padding:1vh;
+      width:100%;
+      margin:10vh 0vh 0vh 0vh;
+      height:50%;
+    }
+    .author{
+      font-size:15px;
+    }
+    .flexWrap{
+      flex-direction:column;
+    }
+
+    .mainButtonsDiv{
+      width:90%;
+      height:auto; 
+    }
+    #dugmeQuote{
+      padding:30px;
+    }    
+    #dugmeTweet{
+      padding:20px;
+    }
+    .skewDiv{
+      display:none;
+    }
+    .author{
+      color:#ffffff;
+      bottom:5vh;
+      right:15vw;
+      font-size:30px;
+    }
+    #gitHubIkonica{
+      fill:var(--main2);
+      }     
   }
-  .novi-citat{
-      font-size:1.5em;
-      background-color:#4776e6;
-      color:white;
-      font-family: Raleway,sans-serif;
+  @media only screen and (max-width: 500px) {
+    .text{
+      padding:10px;
+      
+    }
   }
-  #citat, #autor1{
-    color:#16222a;
-    font-size:1.3em;
+  /*Animacije*/
+  @keyframes fadeIn{
+    0%{
+      opacity:0;
+      transform:translateY(-20px);
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0px);
+    }
   }
+  @keyframes skewDivSlide{
+    0%{
+      width:40%;
+ 
+    }
+    100%{
+      width:35%;
+
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

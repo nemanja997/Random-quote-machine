@@ -7,12 +7,27 @@ $(document).ready(function() {
   //Uzimanje citata na pocetku
     uzmiCitat();
   //Uzimanje citata pritiskom na dugme
-    $("#dugme").on("click", function(){
+    $("#dugmeQuote").on("click", function(){
+      
+      $("#citatDiv").fadeOut(10, function(){
+       
+        $(this).fadeIn("slow");
       uzmiCitat();
     });
+    $("#authorDiv").fadeOut(10, function(){
+       
+      $(this).fadeIn("slow");
+    uzmiCitat();
+  });
+        
+      
+      
+      
+    });
   //Postavljanje citata na Twitter
-    $("#tviter").on("click", function(){
-        window.location.href = "http://twitter.com/home?status="+"''"+trenutniQuote+"''"+ "   -"+trenutniAutor; 
+    $("#dugmeTweet").on("click", function(){
+        /*window.location.href = "http://twitter.com/home?status="+"''"+trenutniQuote+"''"+ "   -"+trenutniAutor; */
+        window.open("http://twitter.com/home?status="+"''"+trenutniQuote+"''"+ "   -"+trenutniAutor, '_blank');
     });
   
 });
@@ -22,8 +37,10 @@ function uzmiCitat(){
   
     $.getJSON("https://talaikis.com/api/quotes/random/", function(a) {
  
-          $("#citat").html("<p>''" + a.quote +"''</p>" );
-          $("#autor1").html("<p>-" + a.author +"</p>" );
+          $("#citatDiv").html( '"'+ a.quote +'"' );
+          $("#authorDiv").html("-" + a.author );
+          
+      
           trenutniQuote=a.quote;
           trenutniAutor=a.author;
 });
