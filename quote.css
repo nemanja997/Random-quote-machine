@@ -118,7 +118,7 @@ fill:#0f0f0f;
     bottom:10vh;
    right:10vw;
    z-index:1;
-   animation:fadeIn 1s 0.5s ease-out;
+   animation:fadeIn 1s 0.8s ease-out;
    opacity:0;
    animation-fill-mode: forwards;
 }
@@ -173,10 +173,11 @@ fill:#0f0f0f;
     box-shadow:#a35643c4 0px 10px 40px ;
     position:relative;
     z-index:1;
+    font-weight: 
 }
 #dugmeQuote:hover{
     background-image: linear-gradient(to right, #fa709a, #fee140);
-    box-shadow:#d17761 0px 30px 80px -25px;
+    box-shadow:#d17761 0px 40px 100px -40px;
     position:relative;
     z-index:3;
     -webkit-transform: scale(1.1);
@@ -198,7 +199,7 @@ fill:#0f0f0f;
     color: #fafafa;
     border-radius:5px;
     position:relative;
-    z-index:2;
+    z-index:100;
 }
   #dugmeTweet:hover{
     box-shadow:#498d9e 0px 20px 70px -12px;
@@ -229,26 +230,28 @@ fill:#0f0f0f;
     .text{
       padding:3vh;
       font-size:30px;
-}
-.header{
-      display:flex;
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      padding:2vh 3vh;
-      justify-content:space-between;
-      z-index:1;
-}
-.skewDiv{
-      width:40%;
-}
-#dugmeQuote{
-      font-size:30px;
-}
-.author{
-      font-size:35px;
-}
+    }
+    .header{
+          display:flex;
+          position:fixed;
+          top:0;
+          left:0;
+          width:100%;
+          padding:2vh 3vh;
+          justify-content:space-between;
+          z-index:1;
+    }
+    .skewDiv{
+          width:40%;
+    }
+    #dugmeQuote{
+          font-size:30px;
+          height:45%;
+    }
+    .author{
+          font-size:35px;
+          right:5vw;
+    }
 }
 
   @media only screen and (max-width: 700px) {
@@ -274,10 +277,10 @@ fill:#0f0f0f;
       height:auto; 
     }
     #dugmeQuote{
-      padding:30px;
+      padding:20px;
     }    
     #dugmeTweet{
-      padding:20px;
+      padding:5px;
     }
     .skewDiv{
       display:none;
