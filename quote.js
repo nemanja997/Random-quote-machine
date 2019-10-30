@@ -3,7 +3,9 @@ var trenutniQuote;
 var trenutniAutor;
 
 $(document).ready(function() {
-  
+    
+    $("#citatDiv").removeClass("hide");
+    
     //Uzimanje citata na pocetku
     uzmiCitat();
 
