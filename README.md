@@ -1,5 +1,6 @@
-# Random-quote-machine
 ![](demo.gif)
+# Random-quote-machine
+
 A web application for getting random quotes with AJAX<br>
 **Update:** Added twitter button.
 
